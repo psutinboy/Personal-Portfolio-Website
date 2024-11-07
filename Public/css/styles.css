@@ -1,0 +1,63 @@
+/* Light theme (default) */
+.footer {
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+.footer-heading {
+  color: #212529;
+}
+
+.footer-text {
+  color: #6c757d;
+}
+
+.footer-link {
+  color: #6c757d;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #0d6efd;
+}
+
+.footer-divider {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  .footer {
+    background-color: #212529;
+  }
+
+  .footer-heading {
+    color: #f8f9fa;
+  }
+
+  .footer-text {
+    color: #e9ecef;
+  }
+
+  .footer-link {
+    color: #e9ecef;
+  }
+
+  .footer-link:hover {
+    color: #0d6efd;
+  }
+
+  .footer-divider {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+} 

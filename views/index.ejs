@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= title %></title>
     <link rel="stylesheet" href="/css/style.css" />
   </head>
-  <body>
+  <body class="d-flex flex-column h-100">
     <header><%- include('./partials/nav') %></header>
 
-    <main>
+    <main class="flex-shrink-0">
       <div
         class="d-flex justify-content-center align-items-center mx-auto my-4"
       >
@@ -41,6 +41,8 @@
       </div>
     </main>
 
-    <footer></footer>
+    <footer class="mt-auto">
+      <%- include('./partials/footer') %>
+    </footer>
   </body>
 </html>
