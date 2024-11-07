@@ -1,47 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= title %></title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header><%- include('./partials/nav') %></header>
 
     <main>
-        <section id="hero">
-            <h1>Welcome to My Website</h1>
-            <p>I'm a developer passionate about creating amazing web experiences</p>
-        </section>
+      <div
+        class="d-flex justify-content-center align-items-center mx-auto my-4"
+      >
+        <h1>Welcome to My Website</h1>
+      </div>
 
-        <section id="about">
+      <div
+        class="container bio-section"
+      >
+        <div class="profile-container">
+          <div class="image-box">
+            <!-- Replace with your actual image path -->
+            <img
+              src="/images/headshot.jpg"
+              alt="Profile picture"
+              class="profile-image"
+            />
+          </div>
+          <div class="description-box">
             <h2>About Me</h2>
-            <!-- Add your content here -->
-        </section>
-
-        <section id="projects">
-            <h2>My Projects</h2>
-            <!-- Add your projects here -->
-        </section>
-
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <!-- Add your contact form or information here -->
-        </section>
+            <p>
+              <!-- Add your bio text here -->
+              Hello! I'm [Your Name]. I'm a [Your Profession/Role] passionate
+              about [Your Interests/Specialties]. With experience in [Your
+              Skills/Background], I focus on [Your Goals/Specialties].
+            </p>
+          </div>
+        </div>
+      </div>
     </main>
 
-    <footer>
-        <p>&copy; <%= new Date().getFullYear() %> Your Name. All rights reserved.</p>
-    </footer>
-</body>
+    <footer></footer>
+  </body>
 </html>
