@@ -4,49 +4,122 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="/favicon_io/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon_io/site.webmanifest" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
   </head>
   <body>
     <header><%- include('./partials/nav') %></header>
     <main>
-      <div class="row justify-content-center mt-5 mx-5">
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title">Title 1</h3>
-              <p class="card-text">Text for project 1</p>
+      <!-- First row with 2 cards -->
+      <div class="row justify-content-center mt-5 mx-5 g-4">
+        <div class="col-md-5">
+          <div class="card h-100">
+            <img
+              src="https://via.placeholder.com/400x200"
+              class="card-img-top"
+              alt="Project 1"
+            />
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title">Workout-Pro</h3>
+              <p class="card-text">
+                Workout Pro is an AI-powered workout planning application
+                designed to help users create personalized workout plans based
+                on their fitness goals, available time, and preferences. With an
+                intuitive interface and robust backend, Workout Pro simplifies
+                the process of setting up and following a workout routine,
+                making it easier for users to stay motivated and achieve their
+                fitness objectives.
+              </p>
+              <%- include('./partials/projects-button', {projectLink:
+              '/projects/workout-pro'}) %>
             </div>
           </div>
         </div>
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title">Title 2</h3>
-              <p class="card-text">Text for project 2</p>
+        <div class="col-md-5">
+          <div class="card h-100">
+            <img
+              src="https://via.placeholder.com/400x200"
+              class="card-img-top"
+              alt="Project 2"
+            />
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title">Card title</h3>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <%- include('./partials/projects-button', {projectLink:
+              '/projects/project2'}) %>
             </div>
           </div>
         </div>
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title">Title 3</h3>
-              <p class="card-text">Text for project 3</p>
+      </div>
+
+      <!-- Second row with 2 cards -->
+      <div class="row justify-content-center mt-5 mx-5 g-4 mb-5">
+        <div class="col-md-5">
+          <div class="card h-100">
+            <img
+              src="https://via.placeholder.com/400x200"
+              class="card-img-top"
+              alt="Project 3"
+            />
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title">Card title</h3>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <%- include('./partials/projects-button', {projectLink:
+              '/projects/project3'}) %>
             </div>
           </div>
         </div>
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title">Title 4</h3>
-              <p class="card-text">Text for project 4</p>
+        <div class="col-md-5">
+          <div class="card h-100">
+            <img
+              src="https://via.placeholder.com/400x200"
+              class="card-img-top"
+              alt="Project 4"
+            />
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title">Card title</h3>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <%- include('./partials/projects-button', {projectLink:
+              '/projects/project4'}) %>
             </div>
           </div>
         </div>
       </div>
     </main>
     <footer><%- include('./partials/footer') %></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

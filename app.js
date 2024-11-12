@@ -14,9 +14,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Import routes
 const projectsRouter = require('./routes/routeProjects');
+const workoutProRouter = require('./routes/routeWorkout-pro');
 
 // Use routes
 app.use('/projects', projectsRouter);
+app.use('/projects', workoutProRouter);
 
 // Routes
 app.get('/', (req, res) => {
