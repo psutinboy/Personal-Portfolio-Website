@@ -4,8 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grant Ledbetter</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon_io/site.webmanifest" />
     <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
   </head>
+
   <body class="d-flex flex-column h-100">
     <header><%- include('./partials/nav') %></header>
 
@@ -13,13 +37,20 @@
       <div
         class="d-flex justify-content-center align-items-center mx-auto my-4"
       >
-        <h1>Welcome to My Website</h1>
+        <div class="text-center">
+          <h1 class="mt-5">
+            Explore the Work of Grant Ledbetter: Developer, Innovator, Creator
+          </h1>
+          <p class="mb-5">
+            Innovative Developer | AI Enthusiast | Full-Stack Specialist
+          </p>
+        </div>
       </div>
 
-      <div class="container bio-section">
+      <!-- About Section -->
+      <div class="container bio-section w-50 my-5">
         <div class="profile-container">
           <div class="image-box">
-            <!-- Replace with your actual image path -->
             <img
               src="/images/updated-picture.jpeg"
               alt="Profile picture"
@@ -29,12 +60,60 @@
           <div class="description-box">
             <h2>About Me</h2>
             <p>
-              <!-- Add your bio text here -->
-              Hello! I'm [Your Name]. I'm a [Your Profession/Role] passionate
-              about [Your Interests/Specialties]. With experience in [Your
-              Skills/Background], I focus on [Your Goals/Specialties].
+              I'm a computer science student at Pittsburg State University,
+              deeply passionate about creating impactful web experiences. With a
+              strong foundation in full-stack development and a keen interest in
+              artificial intelligence, I'm constantly exploring ways to
+              integrate cutting-edge tech into everyday life. I enjoy building
+              responsive, intuitive applications and am excited about how AI can
+              redefine web development.
             </p>
           </div>
+        </div>
+      </div>
+
+      <!-- Skills Section -->
+      <div class="skills-section container my-4">
+        <h2>Skills</h2>
+        <div class="skills-container">
+          <div class="skill-item">
+            <span class="iconify" data-icon="logos:javascript"></span>
+            <span>JavaScript</span>
+          </div>
+          <div class="skill-item">
+            <span class="iconify" data-icon="logos:python"></span>
+            <span>Python</span>
+          </div>
+          <div class="skill-item">
+            <span class="iconify" data-icon="fa-brands:node"></span>
+            <span>Node.js</span>
+          </div>
+          <div class="skill-item">
+            <span class="iconify" data-icon="logos:html-5"></span>
+            <span>HTML/CSS</span>
+          </div>
+          <div class="skill-item">
+            <span class="iconify" data-icon="logos:java"></span>
+            <span>Java</span>
+          </div>
+          <div class="skill-item">
+            <span class="iconify" data-icon="fa6-brands:aws"></span>
+            <span>AWS</span>
+          </div>
+          <div class="skill-item">
+            <span class="iconify" data-icon="carbon:machine-learning"></span>
+            <span>AI/ML</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resume Download Section -->
+      <div class="container text-center my-5 mt-5">
+        <div class="resume-section">
+          <h2 class="mb-5">My Resume</h2>
+          <%- include('./partials/button1') %>
+          <h4 class="my-3">or</h4>
+          <%- include('./partials/button2') %>
         </div>
       </div>
     </main>

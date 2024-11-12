@@ -1,3 +1,6 @@
 if i ask you to change something make sure you change it for both light and dark themes.
 dont create new files unless i tell you to.
 stop making a main.ejs file.
+always make sure to add the favicon to the head of the html file if its not already there.
+use the iconify library for icons.
+use the bootstrap library for styling. unless it deals with light and dark themes.
