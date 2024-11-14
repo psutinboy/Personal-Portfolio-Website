@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iTravel - Documentation</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon_io/site.webmanifest" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <script src="/js/theme.js" defer></script>
+  </head>
+  <body>
+    <%- include('partials/nav') %>
+
+    <div class="container my-5">
+      <h1 class="display-4 mb-4">iTravel</h1>
+
+      <section class="mb-5">
+        <h2>Description</h2>
+        <p class="lead">
+          iTravel is a travel web application designed to simplify trip planning
+          for inexperienced vacationers or anyone seeking the best experiences
+          in their destination. With an intuitive interface and powerful
+          features, iTravel makes vacation planning accessible and enjoyable.
+        </p>
+      </section>
+
+      <section class="mb-5">
+        <h2>Technologies Used</h2>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <span class="iconify me-2" data-icon="logos:react"></span>
+            React.js for the frontend
+          </li>
+          <li class="list-group-item">
+            <span class="iconify me-2" data-icon="logos:nodejs"></span>
+            Node.js for the backend
+          </li>
+          <li class="list-group-item">
+            <span class="iconify me-2" data-icon="simple-icons:express"></span>
+            Express.js as the web framework
+          </li>
+          <li class="list-group-item">
+            <span class="iconify me-2" data-icon="logos:mongodb"></span>
+            MongoDB for the database
+          </li>
+          <li class="list-group-item">
+            <span class="iconify me-2" data-icon="logos:google-maps"></span>
+            Google Maps API for location services
+          </li>
+        </ul>
+      </section>
+
+      <section class="mb-5">
+        <h2>Key Features</h2>
+        <div class="card">
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <span
+                  class="iconify me-2"
+                  data-icon="material-symbols:account-balance-wallet"
+                ></span>
+                Budget Tracking
+              </li>
+              <li class="list-group-item">
+                <span
+                  class="iconify me-2"
+                  data-icon="material-symbols:checklist"
+                ></span>
+                To-do List & Travel Planner
+              </li>
+              <li class="list-group-item">
+                <span
+                  class="iconify me-2"
+                  data-icon="material-symbols:share"
+                ></span>
+                Collaborative Planning
+              </li>
+              <li class="list-group-item">
+                <span
+                  class="iconify me-2"
+                  data-icon="material-symbols:directions"
+                ></span>
+                Multi-transport Travel Times
+              </li>
+              <li class="list-group-item">
+                <span
+                  class="iconify me-2"
+                  data-icon="material-symbols:category"
+                ></span>
+                Activity Categories (Food, Tourist Attractions, etc.)
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-5">
+        <h2>Google Maps Integration</h2>
+        <div class="card">
+          <div class="card-body">
+            <p class="card-text">
+              iTravel leverages the Google Maps API to provide:
+            </p>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <span
+                  class="iconify me-2"
+                  data-icon="material-symbols:location-on"
+                ></span>
+                Accurate Location Data
+              </li>
+              <li class="list-group-item">
+                <span
+                  class="iconify me-2"
+                  data-icon="material-symbols:schedule"
+                ></span>
+                Real-time Travel Updates
+              </li>
+              <li class="list-group-item">
+                <span
+                  class="iconify me-2"
+                  data-icon="material-symbols:map"
+                ></span>
+                Interactive Maps
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-5">
+        <h2>Contributors</h2>
+        <div class="card">
+          <div class="card-body">
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <span class="iconify me-2" data-icon="mdi:github"></span>
+                <strong>Alba Lozano</strong> -
+                <a href="https://github.com/aloda33">@aloda33</a>
+              </li>
+              <li class="mb-3">
+                <span class="iconify me-2" data-icon="mdi:github"></span>
+                <strong>Parker Burns</strong> -
+                <a href="https://github.com/phburns">@phburns</a>
+              </li>
+              <li>
+                <span class="iconify me-2" data-icon="mdi:github"></span>
+                <strong>Grant Ledbetter</strong> -
+                <a href="https://github.com/psutinboy">@psutinboy</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="container mb-5">
+      <%- include('partials/github-button', {link:
+      'https://github.com/psutinboy/iTravel-Web-App'}) %>
+    </div>
+
+    <%- include('partials/footer') %>
+  </body>
+</html>
