@@ -2,8 +2,8 @@ const express = require("express");
 const router = express.Router();
 
 // GET /projects/workout-pro
-router.get("/workout-pro", (req, res) => {
-  res.render("workout-pro");
+router.get("/", (req, res) => {
+  res.render("projects/workout-pro");
 });
 
 module.exports = router; 

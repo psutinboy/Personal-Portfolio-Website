@@ -21,10 +21,10 @@ const aboutMeAppRouter = require("./routes/routeAbout-me-app");
 
 // Use routes
 app.use("/projects", projectsRouter);
-app.use("/projects", workoutProRouter);
-app.use("/projects", passwordManagerRouter);
-app.use("/projects", iTravelRouter);
-app.use("/projects", aboutMeAppRouter);
+app.use("/projects/workout-pro", workoutProRouter);
+app.use("/projects/password-manager", passwordManagerRouter);
+app.use("/projects/itravel", iTravelRouter);
+app.use("/projects/about-me-app", aboutMeAppRouter);
 
 // Routes
 app.get("/", (req, res) => {
