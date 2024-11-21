@@ -8,3 +8,4 @@ make sure each page has the nav and footer partial included.
 for width and height use vw and vh.
 for padding and margin use rem.
 also use rem for radius and position.
+use proper html semantics instead of divs when necessary.
