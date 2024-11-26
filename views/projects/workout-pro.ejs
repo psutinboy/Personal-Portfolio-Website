@@ -49,56 +49,42 @@
         </p>
       </section>
 
-      <section class="mb-5">
-        <h2>Installation Instructions</h2>
-
-        <h3 class="h4 mt-4">Prerequisites</h3>
-        <ul class="list-unstyled">
-          <li>
-            <span class="iconify me-2" data-icon="logos:nodejs"></span>Node.js
-            (v14.0 or higher)
-          </li>
-          <li>
-            <span class="iconify me-2" data-icon="logos:mongodb"></span>MongoDB
-            (local or cloud instance)
-          </li>
-        </ul>
-
-        <h3 class="h4 mt-4">Steps</h3>
-        <ol class="list-group list-group-numbered mb-4">
-          <li class="list-group-item">
-            <strong>Clone the Repository:</strong>
-            <div class="code-block mt-2">
-              <code
-                >git clone https://github.com/psutinboy/workout-pro.git<br />cd
-                workout-pro</code
-              >
-            </div>
-          </li>
-          <li class="list-group-item">
-            <strong>Install Dependencies:</strong>
-            <div class="code-block mt-2">
-              <code>npm install</code>
-            </div>
-          </li>
-          <li class="list-group-item">
-            <strong>Set Up Environment Variables:</strong>
-            <div class="code-block mt-2">
-              <code>
-                MONGODB_URI=&lt;Your MongoDB connection string&gt;<br />
-                SESSION_SECRET=&lt;Your session secret&gt;<br />
-                OPENAI_API_KEY=&lt;Your OpenAI API key&gt;
-              </code>
-            </div>
-          </li>
-          <li class="list-group-item">
-            <strong>Run the Application:</strong>
-            <div class="code-block mt-2">
-              <code>npm start</code>
-            </div>
-          </li>
-        </ol>
-      </section>
+      <%- include('../partials/project-carousel', {
+        images: [
+          {
+            src: '/images/workout-pro/workout-pro1.png',
+            alt: 'Workout Pro Home Page'
+          },
+          {
+            src: '/images/workout-pro/workout-pro2.png',
+            alt: 'Workout Plan Creation'
+          },
+          {
+            src: '/images/workout-pro/workout-pro4.png',
+            alt: 'Create Workout Plan'
+          },
+          {
+            src: '/images/workout-pro/workout-pro3.png',
+            alt: 'Track Workout'
+          },
+          {
+            src: '/images/workout-pro/workout-pro8.png',
+            alt: 'Track Progress'
+          },
+          {
+            src: '/images/workout-pro/workout-pro6.png',
+            alt: 'View Past Workout Plans'
+          },
+          {
+            src: '/images/workout-pro/workout-pro7.png',
+            alt: 'Chat with AI'
+          },
+          {
+            src: '/images/workout-pro/workout-pro5.png',
+            alt: 'Settings Page'
+          }
+        ]
+      }) %>
 
       <section class="mb-5">
         <h2>Usage</h2>

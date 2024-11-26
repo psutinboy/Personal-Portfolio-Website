@@ -1,0 +1,94 @@
+.contact-section {
+    padding: 5rem 0;
+}
+
+h1 {
+    margin-bottom: 1rem;
+    color: var(--bs-heading-color);
+}
+
+.contact-card {
+    background: var(--bs-body-bg);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.form-floating > label {
+    color: var(--bs-body-color);
+}
+
+.form-control,
+.form-select {
+    border-radius: 0.5rem;
+    border: 1px solid var(--bs-border-color);
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+.form-control::placeholder {
+    color: var(--bs-secondary-color);
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .contact-card {
+    background-color: var(--bs-dark);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select {
+    background-color: var(--bs-dark);
+    border-color: var(--bs-border-color);
+    color: var(--bs-light);
+}
+
+[data-theme="dark"] .form-floating > label {
+    color: rgba(255, 255, 255, 0.8);
+    background: transparent;
+}
+
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus {
+    background-color: var(--bs-dark);
+}
+
+[data-theme="dark"] .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+[data-theme="dark"] .form-floating > .form-control:focus ~ label,
+[data-theme="dark"] .form-floating > .form-control:not(:placeholder-shown) ~ label,
+[data-theme="dark"] .form-floating > .form-select ~ label {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-primary {
+    padding: 1rem 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.btn-primary:hover {
+    transform: translateY(-0.125rem);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 3rem 0;
+    }
+    
+    .contact-card {
+        padding: 1.5rem;
+    }
+}

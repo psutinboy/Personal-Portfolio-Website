@@ -18,6 +18,8 @@ const workoutProRouter = require("./routes/routeWorkout-pro");
 const passwordManagerRouter = require("./routes/routePassword-manager");
 const iTravelRouter = require("./routes/routeItravel");
 const aboutMeAppRouter = require("./routes/routeAbout-me-app");
+const javaCalculatorRouter = require("./routes/routeJava-calculator");
+const contactFormRouter = require("./routes/routeContactForm");
 
 // Use routes
 app.use("/projects", projectsRouter);
@@ -25,6 +27,8 @@ app.use("/projects/workout-pro", workoutProRouter);
 app.use("/projects/password-manager", passwordManagerRouter);
 app.use("/projects/itravel", iTravelRouter);
 app.use("/projects/about-me-app", aboutMeAppRouter);
+app.use("/projects/java-calculator", javaCalculatorRouter);
+app.use("/contact/form", contactFormRouter);
 
 // Routes
 app.get("/", (req, res) => {
@@ -32,6 +36,10 @@ app.get("/", (req, res) => {
     title: "My Personal Website",
     // Add any other data you want to pass to the template
   });
+});
+
+app.get("/contact", (req, res) => {
+  res.render("contact");
 });
 
 app.listen(PORT, () => {

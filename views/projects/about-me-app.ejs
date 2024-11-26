@@ -48,6 +48,27 @@
         </p>
       </section>
 
+      <%- include('../partials/project-carousel', {
+        images: [
+          {
+            src: '/images/about-me-app/about-me-app1.png',
+            alt: 'Home Page'
+          },
+          {
+            src: '/images/about-me-app/about-me-app2.png',
+            alt: 'Bio Page'
+          },
+          {
+            src: '/images/about-me-app/about-me-app3.png',
+            alt: 'Skills Page'
+          },
+          {
+            src: '/images/about-me-app/about-me-app4.png',
+            alt: 'Contact Page'
+          }
+        ]
+      }) %>
+
       <section class="mb-5">
         <h2>Features</h2>
         <ul class="list-group">

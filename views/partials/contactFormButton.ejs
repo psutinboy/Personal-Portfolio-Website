@@ -1,0 +1,78 @@
+<style>
+  .form-btn-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+
+  .form-btn {
+    width: 140px;
+    height: 50px;
+    background: linear-gradient(to top, #004080, #0994FF, #66b3ff);
+    color: #fff;
+    border-radius: 3.125rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+  }
+
+  .form-btn:hover {
+    transform: scale(1.1);
+  }
+
+  .form-btn span {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: top 0.5s;
+    text-align: center;
+  }
+
+  .btn-text-one {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+
+  .btn-text-two {
+    position: absolute;
+    width: 100%;
+    top: 150%;
+    left: 0;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+
+  .form-btn:hover .btn-text-one {
+    top: -100%;
+  }
+
+  .form-btn:hover .btn-text-two {
+    top: 50%;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 100;
+  }
+</style>
+
+<div class="form-btn-container">
+  <a href="/contact/form" class="form-btn">
+    <span class="btn-text-one">Contact Me</span>
+    <span class="btn-text-two">Let's Talk!</span>
+  </a>
+</div>

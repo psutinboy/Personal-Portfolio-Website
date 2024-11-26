@@ -1,7 +1,7 @@
 <style>
   .view-btn {
-    --width: 16vw;
-    --height: 7vh;
+    --width: min(16vw, 236px);
+    --height: min(7vh, 57px);
     --button-color: #1163ff;
     width: var(--width);
     height: var(--height);
@@ -88,8 +88,8 @@
   /* Add responsive breakpoints */
   @media (max-width: 768px) {
     .view-btn {
-      --width: 40vw;
-      --height: 6vh;
+      --width: min(40vw, 236px);
+      --height: min(6vh, 57px);
     }
     
     .view-btn-text {
@@ -104,8 +104,8 @@
 
   @media (max-width: 480px) {
     .view-btn {
-      --width: 60vw;
-      --height: 5vh;
+      --width: min(60vw, 236px);
+      --height: min(5vh, 57px);
     }
     
     .view-btn-text {

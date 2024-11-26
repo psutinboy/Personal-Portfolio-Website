@@ -138,7 +138,8 @@ html {
 /* Card styles */
 .card {
   border: 1px solid #e0e0e0;
-  border-radius: 12px;
+  border-radius: 1rem;
+  overflow: hidden;
   transition: all 0.3s ease;
   background-color: #f0f0f0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -146,7 +147,7 @@ html {
 
 .card-body {
   background-color: #f0f0f0;
-  border-radius: 0 0 12px 12px;
+  border-radius: 0 0 1rem 1rem;
 }
 
 .card-title {
@@ -449,11 +450,81 @@ html {
 /* Card image container styles */
 .card-img-container {
   background-color: #cccccc;
-  
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 12px 12px 0 0;
   transition: background-color 0.3s ease;
 }
 
 [data-theme="dark"] .card-img-container {
   background-color: #343a40;
+}
+
+.card-img-top {
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+/* Base carousel styles */
+.carousel {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--bs-body-bg);
+}
+
+.carousel-inner {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.carousel-item-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bs-body-bg);
+  width: 100%;
+  min-height: 200px;
+  padding: 1rem 0;
+}
+
+.carousel-img {
+  max-width: 90%;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Carousel controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1) brightness(0.5);
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #000;
+}
+
+[data-theme="dark"] .carousel-control-prev-icon,
+[data-theme="dark"] .carousel-control-next-icon {
+  filter: invert(1);
+}
+
+[data-theme="dark"] .carousel-indicators [data-bs-target] {
+  background-color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .carousel-img {
+    max-height: 70vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-img {
+    max-height: 60vh;
+  }
 }

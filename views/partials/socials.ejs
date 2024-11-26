@@ -1,0 +1,105 @@
+<style>
+  .social-card-unique {
+    padding: 2rem 1rem;
+    width: 20vw;
+    max-width: 300px;
+    background: var(--bs-body-bg);
+    border-radius: 0.75rem;
+    box-shadow: 0.3rem 0.3rem 1.25rem rgba(9, 148, 255, 0.15),
+      -0.3rem -0.3rem 0.625rem rgba(9, 148, 255, 0.1),
+      inset -0.3rem -0.3rem 0.3rem rgba(9, 148, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .social-card-unique .social-heading-unique {
+    color: #0994ff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .social-card-unique .social-heading-unique span {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  .social-card-unique .social-icon-unique {
+    display: inline-flex;
+    width: 3rem;
+    height: 3rem;
+    box-shadow: 1.5rem 1.5rem 3rem rgba(9, 148, 255, 0.25),
+      -0.125rem -0.125rem 0.3rem rgba(9, 148, 255, 0.25),
+      inset -0.125rem -0.125rem 3.4rem rgba(9, 148, 255, 0.5);
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  .social-card-unique .social-icon-unique:hover {
+    transform: scale(1.1);
+  }
+
+  .social-card-unique .social-icons-container-unique {
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .social-card-unique .social-icon-unique i {
+    color: #0994ff;
+    font-size: 1.5rem;
+  }
+
+  [data-theme='dark'] .social-icon-unique {
+    background-color: #b2b2b2;
+    border-radius: 1rem;
+  }
+
+  .i {
+    height: 10rem;
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+
+  .x {
+    height: 2rem;
+    width: 2rem;
+    color: #0994ff;
+  }
+</style>
+
+<div class="social-card-unique mt-5">
+  <div class="social-heading-unique">
+    Full Stack Developer
+    <span>(HTML, CSS, JS, &amp; Java)</span>
+  </div>
+  <div class="code">
+    <i class="iconify i" data-icon="icon-park-outline:code-computer"></i>
+  </div>
+  <div class="social-icons-container-unique">
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=grantledbetter12@gmail.com" target="_blank" class="social-icon-unique">
+      <i class="iconify x" data-icon="mdi:email"></i>
+    </a>
+    <a href="https://linkedin.com/in/grant-ledbetter-32b383235" target="_blank" class="social-icon-unique">
+      <i class="iconify x" data-icon="mdi:linkedin"></i>
+    </a>
+    <a href="https://github.com/psutinboy" target="_blank" class="social-icon-unique">
+      <i class="iconify x" data-icon="mdi:github"></i>
+    </a>
+  </div>
+</div>
