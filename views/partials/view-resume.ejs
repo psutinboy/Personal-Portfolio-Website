@@ -1,14 +1,14 @@
 <style>
   .view-btn {
-    --width: 250px;
-    --height: 55px;
+    --width: min(16vw, 236px);
+    --height: min(7vh, 57px);
     --button-color: #1163ff;
     width: var(--width);
     height: var(--height);
     background: var(--button-color);
     position: relative;
     text-align: center;
-    border-radius: 0.45em;
+    border-radius: 0.45rem;
     font-family: "Arial";
     border: none;
     cursor: pointer;
@@ -19,6 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1rem;
   }
 
   .view-btn-wrapper {
@@ -61,8 +62,8 @@
 
   .view-btn:hover {
     background: #8347ff;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(111, 44, 244, 0.3);
+    transform: translateY(-0.125rem);
+    box-shadow: 0 0.313rem 0.938rem rgba(111, 44, 244, 0.3);
   }
 
   .view-btn:hover .view-btn-text {
@@ -72,18 +73,51 @@
   .view-btn:hover .view-btn-icon {
     top: 0;
   }
+
+  /* Add responsive breakpoints */
+  @media (max-width: 768px) {
+    .view-btn {
+      --width: min(40vw, 236px);
+      --height: min(6vh, 57px);
+    }
+    
+    .view-btn-text {
+      font-size: 0.875rem;
+    }
+    
+    .view-btn-icon .iconify {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .view-btn {
+      --width: min(60vw, 236px);
+      --height: min(5vh, 57px);
+    }
+    
+    .view-btn-text {
+      font-size: 0.75rem;
+    }
+    
+    .view-btn-icon .iconify {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
 </style>
 
-<a href="/files/Resume_LedbetterG.pdf" target="_blank" class="arrow-button">
+<a href="/files/Resume_LedbetterG.pdf" target="_blank" class="text-decoration-none d-inline-block">
   <button class="view-btn">
     <div class="view-btn-wrapper">
       <div class="view-btn-text">View Resume</div>
       <span class="view-btn-icon">
-        <span
-          class="iconify"
-          data-icon="eva:diagonal-arrow-right-up-outline"
-          width="48"
-          height="48"
+        <span 
+          class="iconify" 
+          data-icon="eva:diagonal-arrow-right-up-outline" 
+          width="2rem" 
+          height="2rem"
         ></span>
       </span>
     </div>

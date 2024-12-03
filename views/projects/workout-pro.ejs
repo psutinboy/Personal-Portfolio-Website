@@ -51,38 +51,14 @@
 
       <%- include('../partials/project-carousel', {
         images: [
-          {
-            src: '/images/workout-pro/workout-pro1.png',
-            alt: 'Workout Pro Home Page'
-          },
-          {
-            src: '/images/workout-pro/workout-pro2.png',
-            alt: 'Workout Plan Creation'
-          },
-          {
-            src: '/images/workout-pro/workout-pro4.png',
-            alt: 'Create Workout Plan'
-          },
-          {
-            src: '/images/workout-pro/workout-pro3.png',
-            alt: 'Track Workout'
-          },
-          {
-            src: '/images/workout-pro/workout-pro8.png',
-            alt: 'Track Progress'
-          },
-          {
-            src: '/images/workout-pro/workout-pro6.png',
-            alt: 'View Past Workout Plans'
-          },
-          {
-            src: '/images/workout-pro/workout-pro7.png',
-            alt: 'Chat with AI'
-          },
-          {
-            src: '/images/workout-pro/workout-pro5.png',
-            alt: 'Settings Page'
-          }
+          { src: '/images/workout-pro/workout-pro1.png', alt: 'Workout Pro Home Page' },
+          { src: '/images/workout-pro/workout-pro2.png', alt: 'Workout Plan Creation' },
+          { src: '/images/workout-pro/workout-pro4.png', alt: 'Create Workout Plan' },
+          { src: '/images/workout-pro/workout-pro3.png', alt: 'Track Workout' },
+          { src: '/images/workout-pro/workout-pro8.png', alt: 'Track Progress' },
+          { src: '/images/workout-pro/workout-pro6.png', alt: 'View Past Workout Plans' },
+          { src: '/images/workout-pro/workout-pro7.png', alt: 'Chat with AI' },
+          { src: '/images/workout-pro/workout-pro5.png', alt: 'Settings Page' }
         ]
       }) %>
 
@@ -194,7 +170,14 @@
       </section>
     </div>
     <div class="container">
-      <%- include('../partials/github-button', {link: 'https://github.com/psutinboy/workout-pro'}) %>
+      <div class="d-flex align-items-center gap-3">
+        <%- include('../partials/github-button', {
+          link: 'https://github.com/psutinboy/workout-pro'
+        }) %>
+        <%- include('../partials/toworkoutpro', {
+          projectLink: 'http://workoutpro.org'
+        }) %>
+      </div>
     </div>
 
     <%- include('../partials/footer') %>

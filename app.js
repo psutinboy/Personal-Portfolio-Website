@@ -20,6 +20,7 @@ const iTravelRouter = require("./routes/routeItravel");
 const aboutMeAppRouter = require("./routes/routeAbout-me-app");
 const javaCalculatorRouter = require("./routes/routeJava-calculator");
 const contactFormRouter = require("./routes/routeContactForm");
+const javaAtmRouter = require("./routes/routeJava-atm");
 
 // Use routes
 app.use("/projects", projectsRouter);
@@ -28,6 +29,7 @@ app.use("/projects/password-manager", passwordManagerRouter);
 app.use("/projects/itravel", iTravelRouter);
 app.use("/projects/about-me-app", aboutMeAppRouter);
 app.use("/projects/java-calculator", javaCalculatorRouter);
+app.use("/projects/java-atm", javaAtmRouter);
 app.use("/contact/form", contactFormRouter);
 
 // Routes

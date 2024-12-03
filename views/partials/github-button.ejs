@@ -1,6 +1,9 @@
 <style>
   .button.x {
-    max-width: 320px;
+    --width: min(16vw, 236px);
+    --height: min(5vh, 57px);
+    width: var(--width);
+    height: var(--height);
     display: flex;
     padding: 0.5rem 1.4rem;
     font-size: 0.875rem;
@@ -8,15 +11,15 @@
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
-    vertical-align: middle;
     align-items: center;
+    justify-content: center;
     border-radius: 0.5rem;
     border: 1px solid rgba(24, 23, 23, 0.25);
     gap: 0.75rem;
     color: #ffffff;
     background-color: rgb(24, 23, 23);
     cursor: pointer;
-    transition: all 0.6s ease;
+    transition: all 0.3s ease;
     text-decoration: none;
   }
 
@@ -58,9 +61,29 @@
     opacity: 0.8;
   }
 
+  @media (max-width: 768px) {
+    .button.x {
+      --width: min(40vw, 236px);
+      --height: min(6vh, 57px);
+      font-size: 0.875rem;
+    }
+    
+    .button.x svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
   @media (max-width: 480px) {
     .button.x {
-      max-width: 100%;
+      --width: min(60vw, 236px);
+      --height: min(5vh, 57px);
+      font-size: 0.75rem;
+    }
+    
+    .button.x svg {
+      width: 1.5rem;
+      height: 1.5rem;
     }
   }
 </style>

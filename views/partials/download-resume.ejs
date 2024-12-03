@@ -1,71 +1,27 @@
 <style>
-  .button {
-    --width: 250px;
-    --height: 55px;
-    --tooltip-height: 35px;
-    --tooltip-width: 90px;
-    --gap-between-tooltip-to-button: 18px;
+  .download-btn {
+    --width: min(16vw, 236px);
+    --height: min(7vh, 57px);
     --button-color: #1163ff;
-    --tooltip-color: #cccccc;
     width: var(--width);
     height: var(--height);
     background: var(--button-color);
     position: relative;
     text-align: center;
-    border-radius: 0.45em;
-    font-family: "Arial";
+    border-radius: 0.45rem;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
   }
 
-  [data-theme="dark"] .button {
-    --tooltip-color: #2d3238;
-  }
-
-  .button::before {
-    position: absolute;
-    content: "Size: 65kb";
-    width: var(--tooltip-width);
-    height: var(--tooltip-height);
-    background-color: var(--tooltip-color);
-    font-size: 0.9rem;
-    color: #000;
-    border-radius: 0.25em;
-    line-height: var(--tooltip-height);
-    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
-    left: calc(50% - var(--tooltip-width) / 2);
-  }
-
-  [data-theme="dark"] .button::before {
-    color: #fff;
-  }
-
-  .button::after {
-    position: absolute;
-    content: "";
-    width: 0;
-    height: 0;
-    border: 10px solid transparent;
-    border-top-color: var(--tooltip-color);
-    left: calc(50% - 10px);
-    bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
-  }
-
-  .button::after,
-  .button::before {
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-  }
-
-  .text {
+  .download-btn-text {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1rem;
   }
 
-  .button-wrapper {
+  .download-btn-wrapper {
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -73,8 +29,8 @@
     left: 0;
   }
 
-  .text,
-  .icon {
+  .download-btn-text,
+  .download-btn-icon {
     overflow: hidden;
     position: absolute;
     width: 100%;
@@ -86,58 +42,140 @@
     color: #fff;
   }
 
-  .text {
+  .download-btn-text {
     top: 0;
   }
 
-  .text,
-  .icon {
+  .download-btn-text,
+  .download-btn-icon {
     transition: top 0.3s ease;
   }
 
-  .icon {
+  .download-btn-icon {
     color: #fff;
     top: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
-  .button:hover {
+  .download-btn:hover {
     background: #8347ff;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(111, 44, 244, 0.3);
+    transform: translateY(-0.125rem);
+    box-shadow: 0 0.313rem 0.938rem rgba(111, 44, 244, 0.3);
   }
 
-  .button:hover .text {
+  .download-btn:hover .download-btn-text {
     top: -100%;
   }
 
-  .button:hover .icon {
+  .download-btn:hover .download-btn-icon {
     top: 0;
   }
 
-  .button:hover:before,
-  .button:hover:after {
+  /* File size tooltip */
+  .download-btn-wrapper::before {
+    position: absolute;
+    content: "Size: 65kb";
+    width: 5.625rem;
+    height: 2.1875rem;
+    background-color: #cccccc;
+    font-size: 0.9rem;
+    color: #000;
+    border-radius: 0.25rem;
+    line-height: 2.1875rem;
+    bottom: 5.1875rem;
+    left: calc(50% - 2.8125rem);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+
+  [data-theme="dark"] .download-btn-wrapper::before {
+    background-color: #2d3238;
+    color: #fff;
+  }
+
+  .download-btn-wrapper::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 0.625rem solid transparent;
+    border-top-color: #cccccc;
+    left: calc(50% - 0.625rem);
+    bottom: 4.375rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+
+  [data-theme="dark"] .download-btn-wrapper::after {
+    border-top-color: #2d3238;
+  }
+
+  .download-btn:hover .download-btn-wrapper::before,
+  .download-btn:hover .download-btn-wrapper::after {
     opacity: 1;
     visibility: visible;
   }
 
-  .button:hover:after {
-    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+  .download-btn:hover .download-btn-wrapper::after {
+    bottom: 3.75rem;
   }
 
-  .button:hover:before {
-    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+  .download-btn:hover .download-btn-wrapper::before {
+    bottom: 4.375rem;
+  }
+
+  /* Add responsive breakpoints */
+  @media (max-width: 768px) {
+    .download-btn {
+      --width: min(40vw, 236px);
+      --height: min(6vh, 57px);
+    }
+
+    .download-btn-text {
+      font-size: 0.875rem;
+    }
+
+    .download-btn-icon .iconify {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .download-btn {
+      --width: min(60vw, 236px);
+      --height: min(5vh, 57px);
+    }
+
+    .download-btn-text {
+      font-size: 0.75rem;
+    }
+
+    .download-btn-icon .iconify {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
   }
 </style>
 
-<a href="/files/Resume_LedbetterG.pdf" download class="text-decoration-none d-inline-block">
-  <button class="button">
-    <div class="button-wrapper">
-      <div class="text">Download Resume</div>
-      <span class="icon">
-        <span class="iconify" data-icon="material-symbols:download" width="48" height="48"></span>
+<a
+  href="/files/Resume_LedbetterG.pdf"
+  download
+  class="text-decoration-none d-inline-block"
+>
+  <button class="download-btn">
+    <div class="download-btn-wrapper">
+      <div class="download-btn-text">Download Resume</div>
+      <span class="download-btn-icon">
+        <span
+          class="iconify"
+          data-icon="material-symbols:download"
+          width="2rem"
+          height="2rem"
+        ></span>
       </span>
     </div>
   </button>

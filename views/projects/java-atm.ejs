@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java ATM - Documentation</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon_io/site.webmanifest" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="/js/theme.js" defer></script>
+  </head>
+  <body>
+    <%- include('../partials/nav') %>
+
+    <div class="container my-5">
+      <h1 class="display-4 mb-4">JavaFX ATM</h1>
+
+      <section class="mb-5">
+        <h2>Description</h2>
+        <p class="lead">
+          A simple ATM (Automated Teller Machine) simulation built with JavaFX
+          and Maven. This application provides basic banking functionality
+          including account access, balance checking, deposits, and withdrawals
+          for both checking and savings accounts.
+        </p>
+      </section>
+
+      <%- include('../partials/project-carousel', { images: [ { src:
+      '/images/atm/atm1.png', alt: 'ATM Login Screen' }, { src:
+      '/images/atm/atm2.png', alt: 'Account Selection' }, { src:
+      '/images/atm/atm3.png', alt: 'Checking Account Screen' }, { src:
+      '/images/atm/atm4.png', alt: 'Savings Account Screen' } ] }) %>
+
+      <section class="mb-5">
+        <h2>Features</h2>
+        <div class="card">
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <span
+                  class="iconify me-2"
+                  data-icon="material-symbols:login"
+                ></span>
+                Secure login system
+              </li>
+              <li class="list-group-item">
+                <span
+                  class="iconify me-2"
+                  data-icon="material-symbols:account-balance"
+                ></span>
+                Checking account management
+              </li>
+              <li class="list-group-item">
+                <span
+                  class="iconify me-2"
+                  data-icon="material-symbols:savings"
+                ></span>
+                Savings account management
+              </li>
+              <li class="list-group-item">
+                <span
+                  class="iconify me-2"
+                  data-icon="material-symbols:payments"
+                ></span>
+                Deposit functionality
+              </li>
+              <li class="list-group-item">
+                <span
+                  class="iconify me-2"
+                  data-icon="material-symbols:money"
+                ></span>
+                Withdrawal functionality
+              </li>
+              <li class="list-group-item">
+                <span
+                  class="iconify me-2"
+                  data-icon="material-symbols:balance"
+                ></span>
+                Balance inquiry
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-5">
+        <h2>Prerequisites</h2>
+        <div class="card">
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <span class="iconify me-2" data-icon="logos:java"></span>
+                Java 21 or higher
+              </li>
+              <li class="list-group-item">
+                <span class="iconify me-2" data-icon="logos:maven"></span>
+                Maven
+              </li>
+              <li class="list-group-item">
+                <span
+                  class="iconify me-2"
+                  data-icon="simple-icons:javafx"
+                ></span>
+                JavaFX 21.0.2
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-5">
+        <h2>Installation</h2>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Building the Project</h5>
+            <div class="code-block mt-2">
+              <code>mvn clean install</code>
+            </div>
+
+            <h5 class="card-title mt-4">Running the Application</h5>
+            <div class="code-block mt-2">
+              <code>mvn javafx:run</code>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-5">
+        <h2>Default Login Credentials</h2>
+        <div class="card">
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <strong>Account Number:</strong> 2222
+              </li>
+              <li class="list-group-item"><strong>PIN:</strong> 123456</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-5">
+        <h2>Project Structure</h2>
+        <div class="card">
+          <div class="card-body">
+            <pre class="mb-0"><code>java-atm/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── example/
+│   │   └── resources/
+│   │       └── fxml/
+└── pom.xml</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-5">
+        <h2>License</h2>
+        <div class="card">
+          <div class="card-body">
+            <p>
+              This project is open source and available under the MIT License.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-5">
+        <h2>Contact</h2>
+        <div class="card">
+          <div class="card-body">
+            <ul class="list-unstyled">
+              <li>
+                <span class="iconify me-2" data-icon="mdi:email"></span>Email:
+                <a href="mailto:grantledbetter12@gmail.com"
+                  >grantledbetter12@gmail.com</a
+                >
+              </li>
+              <li>
+                <span class="iconify me-2" data-icon="mdi:github"></span>GitHub:
+                <a href="https://github.com/psutinboy">psutinboy</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="container mb-5">
+      <%- include('../partials/github-button', {link:
+      'https://github.com/psutinboy/atm'}) %>
+    </div>
+
+    <%- include('../partials/footer') %>
+  </body>
+</html>
